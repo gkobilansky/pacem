@@ -1,0 +1,107 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+body {
+    background: url('https://source.unsplash.com/T-wn8tiYkR8/1024x683/') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Gill Sans", Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+canvas {
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.title,
+.login,
+canvas {
+    display: none;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(10%, 10%, 15%, 0.75);
+}
+
+object {
+    max-width: 50%;
+    max-height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+svg {
+    path,
+    polygon {
+        fill-opacity: 0;
+        fill: teal;
+        stroke: #fff;
+        stroke-width: 10;
+        stroke-dasharray: 16800;
+        stroke-dashoffset: 16800;
+        animation-name: draw;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+    }
+    #path14 {
+        animation-delay: .5s;
+    }
+    #path16 {
+        animation-delay: 1s;
+    }
+    #path18 {
+        animation-delay: 1.25s;
+    }
+    #path20 {
+        animation-delay: 1.5s;
+    }
+    #path22 {
+        animation-delay: 1.75s;
+    }
+}
+
+@keyframes draw {
+    75% {
+        stroke-width: 6;
+    }
+    90% {
+        stroke-dashoffset: 0;
+        stroke-width: 10;
+        fill-opacity: 0;
+        stroke: teal;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill-opacity: 1;
+        stroke-width: 10;
+        stroke: teal;
+    }
+}
+
+// form
