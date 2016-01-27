@@ -1,0 +1,37 @@
+svg path,
+svg polygon {
+  fill-opacity: 0;
+  fill: lightslategrey;
+  stroke: lightslategrey;
+  stroke-width: 10;
+  stroke-dasharray: 16800;
+  stroke-dashoffset: 16800;
+  animation-name: draw;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; }
+svg #path14 {
+  animation-delay: .5s; }
+svg #path16 {
+  animation-delay: 1s; }
+svg #path18 {
+  animation-delay: 1.25s; }
+svg #path20 {
+  animation-delay: 1.5s; }
+svg #path22 {
+  animation-delay: 1.75s; }
+
+@keyframes draw {
+  75% {
+    stroke-width: 6; }
+  90% {
+    stroke-dashoffset: 0;
+    stroke-width: 10;
+    fill-opacity: 0;
+    stroke: lightslategrey; }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-width: 10;
+    stroke: lightslategrey; } }

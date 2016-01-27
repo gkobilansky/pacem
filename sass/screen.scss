@@ -5,13 +5,9 @@
 
 @import "compass/reset";
 body {
-    background: url('https://source.unsplash.com/T-wn8tiYkR8/1024x683/') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: whitesmoke;
     font-family: "Gill Sans", Helvetica, sans-serif;
-    color: white;
+    color: darkslategrey;
     text-align: center;
 }
 
@@ -23,32 +19,40 @@ canvas {
 }
 
 //
-.home {
-    padding-top: 200px;
-}
-
+//.home {
+//    padding-top: 150px;
+//}
 h1 {
     text-transform: uppercase;
     font-size: 1.5em;
     margin: 0 0 25px 0;
 }
 
+.logo {
+    width: 175px;
+    height: auto;
+    margin: 2em auto;
+}
+
+svg path {
+    fill: lightslategrey;
+}
+
 // form 
 .login {
     margin: 0 auto;
     height: 150px;
-    width: 350px;
-    padding: 10px;
     z-index: 2;
+    width: 250px;
 }
 
 .login input[type=text] {
     width: 250px;
     height: 30px;
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid darkslategrey;
     border-radius: 2px;
-    color: #fff;
+    color: darkslategrey;
     font-size: 16px;
     font-weight: 400;
     padding: 4px;
@@ -58,9 +62,9 @@ h1 {
     width: 250px;
     height: 30px;
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(10, 10, 10, 0.6);
     border-radius: 2px;
-    color: #fff;
+    color: darkslategrey;
     font-size: 16px;
     font-weight: 400;
     padding: 4px;
@@ -70,11 +74,11 @@ h1 {
 .login input[type=button] {
     width: 260px;
     height: 35px;
-    background: #fff;
-    border: 1px solid #fff;
+    background: darkslategrey;
+    border: 1px solid darkslategrey;
     cursor: pointer;
     border-radius: 2px;
-    color: #a18d6c;
+    color: white;
     font-size: 16px;
     font-weight: 400;
     padding: 6px;
@@ -91,12 +95,13 @@ h1 {
 
 .login input[type=text]:focus {
     outline: none;
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(10, 10, 10, 0.9);
+    ;
 }
 
 .login input[type=password]:focus {
     outline: none;
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(10, 10, 10, 0.9);
 }
 
 .login input[type=button]:focus {
@@ -104,35 +109,31 @@ h1 {
 }
 
 ::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(10, 10, 10, 0.6);
 }
 
 ::-moz-input-placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(10, 10, 10, 0.6);
+}
+
+.security {
+    text-align: center;
 }
 
 // init display
-.title,
-.login,
+.home,
 canvas {
     display: none;
 }
 
-// Draw Pacem Logo
+// intro
 .modal {
-    display: block;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: hsla(10%, 10%, 15%, 0.75);
+    margin-top: 250px;
 }
 
-object {
-    max-width: 50%;
-    max-height: 50%;
+object.intro {
+    max-width: 75%;
+    max-height: 75%;
     position: absolute;
     top: 0;
     left: 0;
@@ -140,55 +141,3 @@ object {
     bottom: 0;
     margin: auto;
 }
-
-svg {
-    path,
-    polygon {
-        fill-opacity: 0;
-        fill: teal;
-        stroke: #fff;
-        stroke-width: 10;
-        stroke-dasharray: 16800;
-        stroke-dashoffset: 16800;
-        animation-name: draw;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-timing-function: linear;
-    }
-    #path14 {
-        animation-delay: .5s;
-    }
-    #path16 {
-        animation-delay: 1s;
-    }
-    #path18 {
-        animation-delay: 1.25s;
-    }
-    #path20 {
-        animation-delay: 1.5s;
-    }
-    #path22 {
-        animation-delay: 1.75s;
-    }
-}
-
-@keyframes draw {
-    75% {
-        stroke-width: 6;
-    }
-    90% {
-        stroke-dashoffset: 0;
-        stroke-width: 10;
-        fill-opacity: 0;
-        stroke: teal;
-    }
-    100% {
-        stroke-dashoffset: 0;
-        fill-opacity: 1;
-        stroke-width: 10;
-        stroke: teal;
-    }
-}
-
-// form

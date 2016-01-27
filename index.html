@@ -1,19 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Pacem</title>
-    <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
 </head>
 
 <body>
     <canvas id="animation-canvas">
         This text is displayed if your browser does not support HTML5 Canvas.</canvas>
+    <div class="modal">
+        <object type="image/svg+xml" data="logo.svg" class="intro">
+        </object>
+    </div>
+
     <div class="home">
-        <div class="title">
-            <h1>Welcome To Your Peaceful Place</h1></div>
         <div class="login">
             <form method="post">
                 <input type="text" name="u" placeholder="Username" required="required" />
@@ -21,10 +34,7 @@
                 <input type="button" value="Enter" />
             </form>
         </div>
-    </div>
-    <div class="modal">
-        <object type="image/svg+xml" data="logo.svg" class="logo">
-        </object>
+        <div class="security"><i class="fa fa-lock"></i> Document security is our #1 priority. </div>
     </div>
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

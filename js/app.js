@@ -1,10 +1,26 @@
 "use strict";
 $(window).load(function () {
-    $(".modal").delay(5000).fadeOut();
-    $(".title").delay(5000).fadeIn();
-    $(".login").delay(5000).fadeIn();
+    //$(".modal").delay(5000).fadeOut();
+    $(".home").delay(5000).fadeIn();
     $("canvas").delay(5000).fadeIn();
-})
+
+    $(".intro").delay(5000).animate({
+        width: "175px",
+        marginBottom: "2em",
+        bottom: "60%"
+
+    }, 300, function () {
+        //animation complete
+    });
+    //    $(".modal").delay(5000).animate({
+    //        "z-index": -10,
+    //        position: "inherit",
+    //        display: "inline-block"
+    //    }, 200, function () {
+    //        //animation complete
+    //    });
+
+});
 
 //original by Alex Mejias @karatechops
 
@@ -37,7 +53,7 @@ $(document).ready(function () {
             canvas.width = width;
             canvas.height = height;
             context = canvas.getContext("2d");
-            strokecolor = '175,160,79';
+            strokecolor = '119,136,153';
 
             // create points
             points = [];
