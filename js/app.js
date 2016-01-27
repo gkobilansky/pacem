@@ -3,8 +3,7 @@ $(window).load(function () {
     //$(".modal").delay(5000).fadeOut();
     $(".home").delay(5000).fadeIn();
     $("canvas").delay(5000).fadeIn();
-
-    $(".intro").delay(5000).animate({
+    $(".intro").delay(4500).animate({
         width: "175px",
         marginBottom: "2em",
         bottom: "60%"
