@@ -1,27 +1,66 @@
 "use strict";
+
+// Logo intro
+
 $(window).load(function () {
-    //$(".modal").delay(5000).fadeOut();
-    $(".home").delay(5000).fadeIn();
+    $(".home, footer").delay(5000).fadeIn();
     $("canvas").delay(5000).fadeIn();
     $(".intro").delay(4500).animate({
         width: "175px",
         marginBottom: "2em",
         bottom: "60%"
-
     }, 300, function () {
         //animation complete
     });
-    //    $(".modal").delay(5000).animate({
-    //        "z-index": -10,
-    //        position: "inherit",
-    //        display: "inline-block"
-    //    }, 200, function () {
-    //        //animation complete
-    //    });
-
 });
 
-//original by Alex Mejias @karatechops
+// Footer menu
+
+var theToggle = document.getElementById('toggle');
+
+// based on Todd Motto functions
+// http://toddmotto.com/labs/reusable-js/
+
+// hasClass
+function hasClass(elem, className) {
+    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+// addClass
+function addClass(elem, className) {
+    if (!hasClass(elem, className)) {
+        elem.className += ' ' + className;
+    }
+}
+// removeClass
+function removeClass(elem, className) {
+    var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
+// toggleClass
+function toggleClass(elem, className) {
+    var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, " ") + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(" " + className + " ") >= 0) {
+            newClass = newClass.replace(" " + className + " ", " ");
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    } else {
+        elem.className += ' ' + className;
+    }
+}
+
+theToggle.onclick = function () {
+    toggleClass(this, 'on');
+    return false;
+}
+
+
+//Canvas, inspired by Alex Mejias @karatechops
 
 $(document).ready(function () {
     (function ($) {
@@ -42,7 +81,7 @@ $(document).ready(function () {
             //            };
 
             width = $(window).innerWidth();
-            height = $(window).innerHeight() - 50;
+            height = $(window).height() * .75;
             target = {
                 x: width / 2,
                 y: height / 2

@@ -19,14 +19,11 @@
 </head>
 
 <body>
-    <canvas id="animation-canvas">
-        This text is displayed if your browser does not support HTML5 Canvas.</canvas>
-    <div class="modal">
-        <object type="image/svg+xml" data="logo.svg" class="intro">
-        </object>
-    </div>
-
     <div class="home">
+
+
+
+
         <div class="login">
             <form method="post">
                 <input type="text" name="u" placeholder="Username" required="required" />
@@ -36,6 +33,22 @@
         </div>
         <div class="security"><i class="fa fa-lock"></i> Document security is our #1 priority. </div>
     </div>
+    <footer class="menu">
+       <a href="#menu" id="toggle"><span></span></a>
+        <div id="menu">
+            <ul>
+                <li><a href="#">Learn More</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Social Media</a></li>
+            </ul>
+        </div>
+    </footer>
+    <canvas id="animation-canvas">
+        This text is displayed if your browser does not support HTML5 Canvas.</canvas>
+    <div class="modal">
+        <object type="image/svg+xml" data="logo.svg" class="intro">
+        </object>
+
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
