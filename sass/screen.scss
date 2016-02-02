@@ -23,7 +23,6 @@
         bottom: 0;
         height: 10em;
         width: 100%;
-       
     }
     
     // Footer Menu
@@ -126,10 +125,9 @@
         z-index: -10;
     }
     
-    svg path {
-        fill: lightslategrey;
-    }
-    
+    //        svg path {
+    //        fill: lightslategrey;
+    //    }
     // form 
     .login {
         margin: 250px auto 0;
@@ -141,7 +139,7 @@
     .login input[type=text] {
         width: 250px;
         height: 30px;
-        background: transparent;
+        background: whitesmoke;
         border: 1px solid darkslategrey;
         border-radius: 2px;
         color: darkslategrey;
@@ -153,7 +151,7 @@
     .login input[type=password] {
         width: 250px;
         height: 30px;
-        background: transparent;
+        background: whitesmoke;
         border: 1px solid rgba(10, 10, 10, 0.6);
         border-radius: 2px;
         color: darkslategrey;
